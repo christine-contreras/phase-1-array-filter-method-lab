@@ -23,7 +23,10 @@ function findMatching (list, string) {
 function fuzzyMatch(list, string) {
     
     //filter to find array match that start wtih string passed in 
-    return list.filter( letter => letter.toLowerCase().indexOf(string.toLowerCase()) === 0);
+    // return list.filter( letter => letter.toLowerCase().indexOf(string.toLowerCase()) === 0);
+
+    //easier array method 
+    return list.filter(letter => letter.startsWith(string))
 
     //indexOf returns the index withing calling string. take index of the string passed in and see if it === 0. If index is 0 it means the letter is at the beginning of the array match
 
